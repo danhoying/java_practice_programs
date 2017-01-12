@@ -31,11 +31,7 @@ public class DaysInEachMonth {
 		case 2:
 			System.out.print("Leap year (true/false)? ");
 			isLeapYear = keyboard.nextBoolean();
-			if (isLeapYear) {
-				numberOfDays = 29;
-			} else {
-				numberOfDays = 28;
-			}
+			numberOfDays = isLeapYear ? 29 : 28;
 		}
 		
 		System.out.print(numberOfDays);
