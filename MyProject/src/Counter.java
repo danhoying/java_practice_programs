@@ -11,11 +11,6 @@ public class Counter {
 
 		while (true) {
 			
-			out.print(reel1str + " ");
-			out.print(reel2str + " ");
-			out.println(reel3str);
-			out.println();
-			
 			out.print("Enter value: ");
 				
 			reel1str = keyboard.findWithinHorizon(".", 0);
@@ -30,8 +25,8 @@ public class Counter {
 				break;
 			}
 				
-			out.print(reel1 + " ");
-			out.print(reel2 + " ");
+			out.print(reel1);
+			out.print(reel2);
 			out.println(reel3);
 			out.println();
 			out.println("-----------------------");
@@ -63,6 +58,11 @@ public class Counter {
 				out.println();
 				reel3 = 0;
 			}
+			
+			out.print(reel1);
+			out.print(reel2);
+			out.println(reel3);
+			out.println();
 		}
 		keyboard.close();
 	}
