@@ -5,22 +5,30 @@ public class Counter {
 
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
-		int reel1 = 0; 
-		int reel2 = 0;
-		int reel3 = 0;
+		String reel1str = "0"; 
+		String reel2str = "0";
+		String reel3str = "0";
 
-		while (reel1 < 20) {
+		while (true) {
 			
-			out.print(reel1 + " ");
-			out.print(reel2 + " ");
-			out.println(reel3);
+			out.print(reel1str + " ");
+			out.print(reel2str + " ");
+			out.println(reel3str);
 			out.println();
 			
 			out.print("Enter value: ");
 				
-			reel1 = keyboard.nextInt();
-			reel2 = keyboard.nextInt();
-			reel3 = keyboard.nextInt();
+			reel1str = keyboard.findWithinHorizon(".", 0);
+			reel2str = keyboard.findWithinHorizon(".", 1);
+			reel3str = keyboard.findWithinHorizon(".", 2);
+			
+			int reel1 = Integer.parseInt(reel1str);
+			int reel2 = Integer.parseInt(reel2str);
+			int reel3 = Integer.parseInt(reel3str);
+			
+			if (reel1 == 9 && reel2 == 9 && reel3 == 9) {
+				break;
+			}
 				
 			out.print(reel1 + " ");
 			out.print(reel2 + " ");
